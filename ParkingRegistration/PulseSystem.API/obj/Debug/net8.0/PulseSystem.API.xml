@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PulseSystem.API</name>
+    </assembly>
+    <members>
+        <member name="M:PulseSystem.Controllers.GatewayController.#ctor(IGatewayService)">
+            <summary>
+            Construtor da controller de gateways.
+            </summary>
+            <param name="gatewayService">Serviço de gateways.</param>
+        </member>
+        <member name="M:PulseSystem.Controllers.GatewayController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os gateways com paginação.
+            </summary>
+            <param name="pageNumber">Número da página (padrão 1).</param>
+            <param name="pageSize">Tamanho da página (padrão 10).</param>
+            <returns>Lista paginada de gateways.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.GatewayController.GetById(System.Int64)">
+            <summary>
+            Retorna um gateway pelo ID.
+            </summary>
+            <param name="id">ID do gateway.</param>
+            <returns>Gateway correspondente.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.GatewayController.GetByMacAddress(System.String)">
+            <summary>
+            Retorna um gateway pelo endereço MAC.
+            </summary>
+            <param name="macAddress">Endereço MAC do gateway.</param>
+            <returns>Gateway correspondente.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.GatewayController.GetByParkingId(System.Int64)">
+            <summary>
+            Retorna todos os gateways de um pátio específico.
+            </summary>
+            <param name="parkingId">ID do pátio.</param>
+            <returns>Lista de gateways do pátio.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.GatewayController.Create(PulseSystem.Application.DTOs.requests.GatewayRequestDto)">
+            <summary>
+            Cria um novo gateway.
+            </summary>
+            <param name="dto">Dados do gateway a ser criado.</param>
+            <returns>Gateway criado.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.GatewayController.Update(System.Int64,PulseSystem.Application.DTOs.requests.GatewayRequestDto)">
+            <summary>
+            Atualiza um gateway existente.
+            </summary>
+            <param name="id">ID do gateway.</param>
+            <param name="dto">Dados atualizados do gateway.</param>
+            <returns>Gateway atualizado.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.GatewayController.Delete(System.Int64)">
+            <summary>
+            Remove um gateway existente.
+            </summary>
+            <param name="id">ID do gateway.</param>
+        </member>
+        <member name="M:PulseSystem.Controllers.ParkingController.#ctor(PulseSystem.Application.Services.interfaces.IParkingService)">
+            <summary>
+            Construtor da controller de pátios.
+            </summary>
+            <param name="parkingService">Serviço responsável pelas operações de pátios.</param>
+        </member>
+        <member name="M:PulseSystem.Controllers.ParkingController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os pátios com paginação.
+            </summary>
+            <param name="pageNumber">Número da página (padrão 1).</param>
+            <param name="pageSize">Tamanho da página (padrão 10).</param>
+            <returns>Lista paginada de pátios.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.ParkingController.GetById(System.Int64)">
+            <summary>
+            Retorna um pátio pelo ID.
+            </summary>
+            <param name="id">ID do pátio.</param>
+            <returns>Pátio correspondente.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.ParkingController.GetByLocation(System.String,System.String)">
+            <summary>
+            Retorna um pátio pelo endereço (rua e complemento).
+            </summary>
+            <param name="street">Nome da rua do pátio.</param>
+            <param name="complement">Complemento do endereço do pátio.</param>
+            <returns>Pátio correspondente ao endereço informado.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.ParkingController.Create(PulseSystem.Application.DTOs.requests.ParkingRequestDto)">
+            <summary>
+            Cria um novo pátio.
+            </summary>
+            <param name="dto">Dados do pátio a ser criado.</param>
+            <returns>Pátio criado, com sugestões de zonas e gateways.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.ParkingController.Update(System.Int64,PulseSystem.Application.DTOs.requests.ParkingRequestDto)">
+            <summary>
+            Atualiza um pátio existente.
+            </summary>
+            <param name="id">ID do pátio a ser atualizado.</param>
+            <param name="dto">Dados atualizados do pátio.</param>
+            <returns>Pátio atualizado, com sugestões de zonas e gateways.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.ParkingController.Delete(System.Int64)">
+            <summary>
+            Remove um pátio existente pelo ID.
+            </summary>
+            <param name="id">ID do pátio a ser removido.</param>
+        </member>
+        <member name="M:PulseSystem.Controllers.ZoneController.#ctor(PulseSystem.Application.Services.interfaces.IZoneService)">
+            <summary>
+            Construtor da controller de zonas.
+            </summary>
+            <param name="zoneService">Serviço responsável pelas operações de zonas.</param>
+        </member>
+        <member name="M:PulseSystem.Controllers.ZoneController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Retorna todas as zonas com paginação.
+            </summary>
+        </member>
+        <member name="M:PulseSystem.Controllers.ZoneController.GetById(System.Int64)">
+            <summary>
+            Retorna uma zona pelo ID.
+            </summary>
+        </member>
+        <member name="M:PulseSystem.Controllers.ZoneController.GetByParkingId(System.Int64)">
+            <summary>
+            Retorna todas as zonas de um pátio específico.
+            </summary>
+        </member>
+        <member name="M:PulseSystem.Controllers.ZoneController.Create(PulseSystem.Application.DTOs.requests.ZoneRequestDto)">
+            <summary>
+            Cria uma nova zona em um pátio.
+            </summary>
+        </member>
+        <member name="M:PulseSystem.Controllers.ZoneController.Update(System.Int64,PulseSystem.Application.DTOs.requests.ZoneRequestDto)">
+            <summary>
+            Atualiza uma zona existente.
+            </summary>
+        </member>
+        <member name="M:PulseSystem.Controllers.ZoneController.Delete(System.Int64)">
+            <summary>
+            Remove uma zona existente pelo ID.
+            </summary>
+        </member>
+    </members>
+</doc>

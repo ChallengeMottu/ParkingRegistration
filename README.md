@@ -158,7 +158,7 @@ Content-Type: application/json
   "status": 1,
   "macAddress": "00:1B:44:11:3A:B7",
   "lastIP": "192.168.0.15",
-  "parkingId": {id_parking}
+  "parkingId": {id_gateway}
 }
 
 ```
@@ -249,6 +249,39 @@ DELETE /zones/{id_zone}
 ```
 
 ---
+
+## 📡 Status Codes da API
+
+A aplicação segue os **padrões RESTful** e retorna os **status codes HTTP** adequados para cada operação.  
+Isso facilita a integração com clientes externos e garante clareza nas respostas.
+
+### 🔑 Status Codes Utilizados
+
+- **200 OK** → Requisição bem-sucedida (usado em operações de consulta e atualização).  
+- **201 Created** → Recurso criado com sucesso (usado em operações `POST`).  
+- **204 No Content** → Recurso deletado com sucesso, sem corpo de resposta.  
+- **400 Bad Request** → Erro de validação ou requisição malformada (ex: campos obrigatórios ausentes).  
+- **404 Not Found** → Recurso não encontrado (ex: ID inexistente).  
+- **422 Unprocessable Entity** → Quando a requisição foi entendida, mas contém erros de validação semântica (ex: medidas inválidas para zonas).  
+- **500 Internal Server Error** → Erro inesperado no servidor.  
+
+### 📝 Exemplo de Resposta com Erro
+
+```json
+{
+  "status": 422,
+  "error": "Unprocessable Entity",
+  "message": "As medidas da zona não podem exceder a área disponível do pátio.",
+  "path": "/zones"
+}
+
+---
+
+## 👩‍💻 Grupo Desenvolvedor
+
+- Gabriela de Sousa Reis RM558830
+- Laura Amadeu Soares RM556690
+- Raphael Lamaison Kim RM557914
 
 
 

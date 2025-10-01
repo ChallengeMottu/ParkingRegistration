@@ -40,6 +40,7 @@ Essa abordagem segue princípios do **Domain-Driven Design (DDD)** e **Clean Arc
 - **HATEOAS**
 - **Swagger / OpenAPI**
 - **Banco de dados Oracle**
+- **Paginação**
 
 ---
 
@@ -57,10 +58,11 @@ dotnet restore
 ```
 
 3. Configurar string de conexão
+
 No **appsettings.json**, configure sua conexão com o banco de dados:
 ```bash
 "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=PulseDB;User Id=sa;Password=senha123;"
+    "SystemPulse": "Server=localhost;Database=PulseDB;User Id=sa;Password=senha123;"
 }
 ```
 
@@ -81,5 +83,174 @@ http://localhost:5000/swagger
 
 ---
 
-## 
+## ✅ Casos de Teste (API Endpoints)
+
+Abaixo estão exemplos de requisições para testar os principais recursos da API (`Gateways`, `Parkings` e `Zones`).
+
+### 🚗 Parking (Pátios)
+
+#### ➕ Criar Parking (POST)
+```http
+POST /parkings
+Content-Type: application/json
+
+{
+  "name": "Pátio Central",
+  "location": {
+    "street": "Rua A",
+    "complement": "Próximo ao mercado",
+    "neighborhood": "Centro",
+    "cep": "12345-678",
+    "city": "São Paulo",
+    "state": "SP"
+  },
+  "availableArea": 5000,
+  "capacity": 300
+}
+```
+
+#### 📋 Listar Todos (GET)
+```http
+GET /parkings?pageNumber=1&pageSize=10
+```
+
+#### 🔍 Buscar por ID (GET)
+```http
+GET /parkings/{id_parking}
+```
+
+#### ✏️ Atualizar Parking (PUT)
+```http
+PUT /parkings/{id_parking}
+Content-Type: application/json
+
+{
+  "name": "Pátio Central Atualizado",
+  "location": {
+    "street": "Rua B",
+    "complement": "Ao lado da escola",
+    "neighborhood": "Centro",
+    "cep": "12345-678",
+    "city": "São Paulo",
+    "state": "SP"
+  },
+  "availableArea": 6000,
+  "capacity": 350
+}
+
+```
+
+#### ❌ Deletar Parking (DELETE)
+```http
+DELETE /parkings/{id_parking}
+```
+---
+
+### 📡 Gateways
+
+#### ➕ Criar Gateway (POST)
+```http
+POST /gateways
+Content-Type: application/json
+
+{
+  "model": "Pulse-GTW-01",
+  "status": 1,
+  "macAddress": "00:1B:44:11:3A:B7",
+  "lastIP": "192.168.0.15",
+  "parkingId": {id_parking}
+}
+
+```
+
+#### 📋 Listar Todos (GET)
+```http
+GET /gateways?pageNumber=1&pageSize=10
+```
+
+### 🔍 Buscar por ID (GET)
+```http
+GET /gateways/{id_gateway}
+```
+
+#### 🔍 Buscar por MAC Address (GET)
+```http
+GET /gateways/mac/00:1B:44:11:3A:B7
+```
+
+#### ✏️ Atualizar Gateway (PUT)
+```http
+PUT /gateways/1
+Content-Type: application/json
+
+{
+  "model": "Pulse-GTW-02",
+  "status": 1,
+  "macAddress": "00:1B:44:11:3A:B7",
+  "lastIP": "192.168.0.20",
+  "parkingId": 1
+}
+```
+
+#### ❌ Deletar Gateway (DELETE)
+```http
+DELETE /gateways/{id_gateway}
+```
+---
+
+### 🏷 Zones
+
+#### ➕ Criar Zone (POST)
+```http
+POST /zones
+Content-Type: application/json
+
+{
+  "name": "Zona A",
+  "description": "Zona principal",
+  "width": 25,
+  "length": 50,
+  "parkingId": 1
+}
+```
+
+#### 📋 Listar Todas (GET)
+```http
+GET /zones?pageNumber=1&pageSize=10
+```
+
+#### 🔍 Buscar por ID (GET)
+```http
+GET /zones/{id_zone}
+```
+
+#### 📍 Buscar por Parking ID (GET)
+```http
+GET /zones/parking/{id_parking}
+```
+
+#### ✏️ Atualizar Zone (PUT)
+```http
+PUT /zones/{id_zone}
+Content-Type: application/json
+
+{
+  "name": "Zona A Atualizada",
+  "description": "Zona reformada",
+  "width": 30,
+  "length": 55,
+  "parkingId": 1
+}
+```
+
+#### ❌ Deletar Zone (DELETE)
+```http
+DELETE /zones/{id_zone}
+```
+
+---
+
+
+
+
 

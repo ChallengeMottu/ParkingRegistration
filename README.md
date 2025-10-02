@@ -274,6 +274,7 @@ Isso facilita a integração com clientes externos e garante clareza nas respost
   "message": "As medidas da zona não podem exceder a área disponível do pátio.",
   "path": "/zones"
 }
+```
 
 ---
 

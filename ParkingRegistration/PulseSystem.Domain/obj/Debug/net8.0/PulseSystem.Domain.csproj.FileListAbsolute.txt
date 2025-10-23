@@ -1,0 +1,36 @@
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.deps.json
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.dll
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.pdb
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.AssemblyInfo.cs
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.dll
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\refint\PulseSystem.Domain.dll
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.pdb
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\ref\PulseSystem.Domain.dll
+C:\Users\gabis\RiderProjects\PulseSystem\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.sourcelink.json
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.deps.json
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.dll
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.pdb
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.AssemblyInfo.cs
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.sourcelink.json
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.dll
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\refint\PulseSystem.Domain.dll
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.pdb
+C:\Users\gabis\RiderProjects\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\ref\PulseSystem.Domain.dll
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.deps.json
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.dll
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\bin\Debug\net8.0\PulseSystem.Domain.pdb
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.AssemblyInfo.cs
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.sourcelink.json
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.dll
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\refint\PulseSystem.Domain.dll
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\PulseSystem.Domain.pdb
+C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\Challenge\Dotnet\ParkingRegistration\ParkingRegistration\PulseSystem.Domain\obj\Debug\net8.0\ref\PulseSystem.Domain.dll

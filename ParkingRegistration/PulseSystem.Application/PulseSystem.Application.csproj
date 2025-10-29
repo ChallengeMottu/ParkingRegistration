@@ -16,6 +16,9 @@
       <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
       <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
       <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+      <PackageReference Include="Microsoft.Extensions.ML" Version="5.0.0-preview.25503.2" />
+      <PackageReference Include="Microsoft.ML" Version="5.0.0-preview.25503.2" />
+      <PackageReference Include="Microsoft.ML.DataView" Version="5.0.0-preview.25503.2" />
     </ItemGroup>
 
 </Project>

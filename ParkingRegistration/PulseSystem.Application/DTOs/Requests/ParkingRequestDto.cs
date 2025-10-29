@@ -17,4 +17,12 @@ public class ParkingRequestDto
     
     [Required(ErrorMessage = "A capacidade precisa ser informada")]
     public int Capacity { get; set; }
+    
+    
+    [Required(ErrorMessage = "A planta da estrutura do pátio é obrigatória")]
+    public string structurePlan { get; set; }
+    
+    
+    [Required(ErrorMessage = "A planta baixa do pátio completa é obrigatória")]
+    public string floorPlan { get; set; } 
 }

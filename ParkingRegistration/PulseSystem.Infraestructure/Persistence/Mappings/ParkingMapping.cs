@@ -26,6 +26,7 @@ namespace PulseSystem.Infraestructure.Persistence.Mappings
                    .HasColumnType("NUMBER"); 
 
             builder.Property(p => p.Capacity)
+                   .HasColumnName("CAPACITY")
                    .IsRequired()
                    .HasColumnType("NUMBER"); 
 
@@ -34,9 +35,11 @@ namespace PulseSystem.Infraestructure.Persistence.Mappings
                    .HasDefaultValueSql("SYSDATE"); 
             
             builder.Property(p => p.structurePlan)
+                   .HasColumnName("STRUCTUREPLAN")
                    .IsRequired();
             
             builder.Property(p => p.floorPlan)
+                   .HasColumnName("FLOORPLAN")
                    .IsRequired();
             
             builder.OwnsOne(x => x.Location, address =>

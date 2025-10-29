@@ -72,6 +72,13 @@ public class ParkingService : IParkingService
         return _mapper.Map<ParkingResponseListDto>(parking);
     }
 
+    public async Task<string> GetStructurePlanByIdAsync(long id)
+    {
+        var parking = await _parkingRepository.GetByIdAsync(id)
+                      ?? throw new ResourceNotFoundException("Pátio não encontrado");
+        return parking.structurePlan;
+    }
+
     public async Task<ParkingResponseDto?> GetByLocationAsync(string street, string complement)
     {
         if (string.IsNullOrWhiteSpace(street))

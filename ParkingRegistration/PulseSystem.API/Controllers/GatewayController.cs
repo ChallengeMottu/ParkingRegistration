@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PulseSystem.Application.DTOs.requests;
 using PulseSystem.Application.DTOs.responses;
@@ -7,7 +8,8 @@ using PulseSystem.Configuration;
 namespace PulseSystem.Controllers
 {
     [Authorize(Roles = "GESTOR")]
-    [Route("/gateways")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
     [ApiController]
     public class GatewayController : ControllerBase
     {

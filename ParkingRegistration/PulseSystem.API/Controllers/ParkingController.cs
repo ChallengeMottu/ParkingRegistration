@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Mvc;
 using PulseSystem.Application.DTOs.requests;
 using PulseSystem.Application.DTOs.responses;
 using PulseSystem.Application.Services.interfaces;
 using PulseSystem.Configuration;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 
 namespace PulseSystem.Controllers
 {
     [Authorize]
-    [Route("/parkings")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
     [ApiController]
     public class ParkingController : ControllerBase
     {
@@ -62,6 +62,20 @@ namespace PulseSystem.Controllers
             _hateoas.AddParkingLinks(parking, Url);
             return Ok(parking);
         }
+        
+        
+        [HttpGet("{id:long}/structure", Name = "GetStructurePlanById")]
+        [Produces("image/svg+xml")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        public async Task<ActionResult> GetStructurePlanByIdAsync(long id)
+        {
+            var parking = await _parkingService.GetStructurePlanByIdAsync(id);
+            
+
+            return Content(parking, "image/svg+xml");
+        }
+
 
         /// <summary>
         /// Retorna um pátio pelo endereço (rua e complemento).

@@ -8,6 +8,8 @@ public interface IParkingService
 {
     
     Task<ParkingResponseListDto> GetByIdAsync(long id);
+    
+    Task<string> GetStructurePlanByIdAsync(long id);
     Task<ParkingResponseDto?> GetByLocationAsync(string street, string complement);
     
     Task<PaginatedResult<ParkingResponseDto>> GetAllAsync(int pageNumber, int pageSize);

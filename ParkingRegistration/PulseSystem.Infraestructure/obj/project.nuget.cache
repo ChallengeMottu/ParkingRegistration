@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k+W/nG7tq18=",
+  "dgSpecHash": "lSSoue0Kzi0=",
   "success": true,
   "projectFilePath": "C:\\Users\\gabis\\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\\Área de Trabalho\\Challenge\\Dotnet\\ParkingRegistration\\ParkingRegistration\\PulseSystem.Infraestructure\\PulseSystem.Infraestructure.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\gabis\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.9\\microsoft.entityframeworkcore.abstractions.9.0.9.nupkg.sha512",
     "C:\\Users\\gabis\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.9\\microsoft.entityframeworkcore.analyzers.9.0.9.nupkg.sha512",
     "C:\\Users\\gabis\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.9\\microsoft.entityframeworkcore.design.9.0.9.nupkg.sha512",
+    "C:\\Users\\gabis\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.21\\microsoft.entityframeworkcore.inmemory.8.0.21.nupkg.sha512",
     "C:\\Users\\gabis\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.9\\microsoft.entityframeworkcore.relational.9.0.9.nupkg.sha512",
     "C:\\Users\\gabis\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.9\\microsoft.entityframeworkcore.sqlserver.9.0.9.nupkg.sha512",
     "C:\\Users\\gabis\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.9\\microsoft.extensions.caching.abstractions.9.0.9.nupkg.sha512",

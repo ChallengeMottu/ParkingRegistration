@@ -16,16 +16,14 @@ namespace PulseSystem.Controllers
     {
         private readonly IParkingService _parkingService;
         private readonly HateoasConfig _hateoas;
-
-        /// <summary>
-        /// Construtor da controller de pátios.
-        /// </summary>
-        /// <param name="parkingService">Serviço responsável pelas operações de pátios.</param>
-        public ParkingController(IParkingService parkingService)
+        public ParkingController(IParkingService parkingService, HateoasConfig hateoas)
         {
             _parkingService = parkingService;
-            _hateoas = new HateoasConfig();
+            _hateoas = hateoas;
         }
+
+        
+        
 
         /// <summary>
         /// Retorna todos os pátios com paginação.

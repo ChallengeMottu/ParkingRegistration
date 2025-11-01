@@ -761,6 +761,22 @@
           "build/net8.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.21": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.21"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/9.0.9": {
         "type": "package",
         "dependencies": {
@@ -2282,6 +2298,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.9",
+          "Microsoft.EntityFrameworkCore.InMemory": "8.0.21",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.9",
           "Oracle.EntityFrameworkCore": "9.23.90",
           "PulseSystem.Domain": "1.0.0"
@@ -3682,6 +3699,21 @@
         "lib/net8.0/Microsoft.EntityFrameworkCore.Design.xml",
         "microsoft.entityframeworkcore.design.9.0.9.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.21": {
+      "sha512": "rw+LgXOJnzlhhyucV/S6nq5HVDeU1kCzVNws5sNNnIiTkSHLCauimCOUOdFrbnJsbuy6WtA6Er5QS2wY6idORg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.21",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.8.0.21.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/9.0.9": {

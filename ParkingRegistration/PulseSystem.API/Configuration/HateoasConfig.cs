@@ -16,25 +16,25 @@ public class HateoasConfig
         };
     }
 
-    public void AddParkingLinks(ParkingResponseDto dto, IUrlHelper urlHelper)
+    public virtual void AddParkingLinks(ParkingResponseDto dto, IUrlHelper urlHelper)
     {
         dto.Links ??= new List<LinkDto>();
         dto.Links.AddRange(BuildParkingLinks(dto.Id, urlHelper));
     }
 
-    public void AddParkingLinks(ParkingResponseListDto dto, IUrlHelper urlHelper)
+    public virtual void AddParkingLinks(ParkingResponseListDto dto, IUrlHelper urlHelper)
     {
         dto.Links ??= new List<LinkDto>();
         dto.Links.AddRange(BuildParkingLinks(dto.Id, urlHelper));
     }
 
-    public void AddParkingLinks(ParkingSuggestionDto dto, IUrlHelper urlHelper)
+    public virtual void AddParkingLinks(ParkingSuggestionDto dto, IUrlHelper urlHelper)
     {
         dto.Links ??= new List<LinkDto>();
         dto.Links.AddRange(BuildParkingLinks(dto.Id, urlHelper));
     }
 
-    public void AddGatewayLinks(GatewayResponseDto dto, IUrlHelper urlHelper)
+    public virtual void AddGatewayLinks(GatewayResponseDto dto, IUrlHelper urlHelper)
     {
         dto.Links ??= new List<LinkDto>();
 
@@ -43,7 +43,7 @@ public class HateoasConfig
         dto.Links.Add(new LinkDto(urlHelper.Link("DeleteGateway", new { id = dto.Id }), "delete_gateway", "DELETE"));
     }
 
-    public void AddZoneLinks(ZoneResponseDto dto, IUrlHelper urlHelper)
+    public virtual void AddZoneLinks(ZoneResponseDto dto, IUrlHelper urlHelper)
     {
         dto.Links ??= new List<LinkDto>();
 

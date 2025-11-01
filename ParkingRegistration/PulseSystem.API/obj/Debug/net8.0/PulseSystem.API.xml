@@ -60,12 +60,6 @@
             </summary>
             <param name="id">ID do gateway.</param>
         </member>
-        <member name="M:PulseSystem.Controllers.ParkingController.#ctor(PulseSystem.Application.Services.interfaces.IParkingService)">
-            <summary>
-            Construtor da controller de pátios.
-            </summary>
-            <param name="parkingService">Serviço responsável pelas operações de pátios.</param>
-        </member>
         <member name="M:PulseSystem.Controllers.ParkingController.GetAll(System.Int32,System.Int32)">
             <summary>
             Retorna todos os pátios com paginação.

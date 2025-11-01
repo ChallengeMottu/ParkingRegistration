@@ -59,7 +59,7 @@ public class ParkingServiceV2 : IParkingServiceV2
                 AvailableArea = parking.AvailableArea,
                 Capacity = parking.Capacity,
                 ZoneSuggestionMessage = GenerateZoneSuggestionMessage(parking),
-                SuggestedGateways = CalculateSuggestedGatewaysML(parking) // v2: ML
+                SuggestedGateways = CalculateSuggestedGatewaysML(parking) 
             };
         }
 

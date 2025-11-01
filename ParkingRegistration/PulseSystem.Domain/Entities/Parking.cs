@@ -20,8 +20,12 @@ public class Parking
     public string floorPlan { get; set; } 
     public List<Zone> Zones { get; set; } = new List<Zone>();
     public List<Gateway> Gateways { get; set; } = new List<Gateway>();
-    
-    
+
+
+    public Parking()
+    {
+    }
+
     private const int MaxZones = 4;
     
     

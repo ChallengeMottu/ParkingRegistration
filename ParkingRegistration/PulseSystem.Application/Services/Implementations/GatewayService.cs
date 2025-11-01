@@ -21,6 +21,11 @@ public class GatewayService : IGatewayService
         _mapper = mapper;
     }
 
+    public GatewayService()
+    {
+        
+    }
+
 
     public async Task<PaginatedResult<GatewayResponseDto>> GetAllAsync(int pageNumber, int pageSize)
     {

@@ -12,7 +12,7 @@ public class LoginService
         _employeeRepository = employeeRepository;
     }
 
-    public async Task<Employee?> ValidatedUserAsync(string email, string password)
+    public virtual async Task<Employee?> ValidatedUserAsync(string email, string password)
     {
         var employee = await _employeeRepository.GetByEmailAsync(email);
         if (employee == null)
@@ -29,7 +29,7 @@ public class LoginService
         };
     }
 
-    public bool IsGestor(Employee employee)=>
+    public virtual bool IsGestor(Employee employee)=>
         employee.Role.Equals("GESTOR",  StringComparison.OrdinalIgnoreCase);
    
 }

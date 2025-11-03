@@ -20,9 +20,11 @@ public class ParkingRequestDto
     
     
     [Required(ErrorMessage = "A planta da estrutura do pátio é obrigatória")]
-    public string structurePlan { get; set; }
+    public string StructurePlan { get; set; }
     
     
     [Required(ErrorMessage = "A planta baixa do pátio completa é obrigatória")]
-    public string floorPlan { get; set; } 
+    public string FloorPlan { get; set; } 
+    
+    public string MapPlan { get; set; } 
 }

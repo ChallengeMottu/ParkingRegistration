@@ -75,8 +75,9 @@ namespace PulseSystem.API.Tests.Unit.Controllers
                 Name = "Novo Pátio",
                 Capacity = 50,
                 AvailableArea = 1500,
-                structurePlan = "<svg></svg>",
-                floorPlan = "<svg></svg>",
+                StructurePlan = "<svg></svg>",
+                FloorPlan = "<svg></svg>",
+                MapPlan = "<svg></svg>",
                 Location = new Address
                 {
                     Street = "Rua Beta",
@@ -128,33 +129,6 @@ namespace PulseSystem.API.Tests.Unit.Controllers
             _parkingServiceMock.Verify(s => s.RemoveAsync(It.IsAny<long>()), Times.Once);
         }
 
-        [Fact]
-        public async Task GetByLocation_ShouldReturnOk_WhenParkingExists()
-        {
-            // Arrange
-            var response = new ParkingResponseDto
-            {
-                Id = 3,
-                Name = "Pátio Leste",
-                Capacity = 200,
-                AvailableArea = 4500,
-                Location = new Address { Street = "Rua Teste", Complement = "123" }
-            };
-
-            _parkingServiceMock
-                .Setup(s => s.GetByLocationAsync(It.IsAny<string>(), It.IsAny<string>()))
-                .ReturnsAsync(response);
-
-            // Act
-            var result = await _controller.GetByLocation("Rua Teste", "123");
-
-            // Assert
-            var okResult = result.Result as OkObjectResult;
-            okResult.Should().NotBeNull();
-            okResult!.StatusCode.Should().Be(200);
-            okResult.Value.Should().BeEquivalentTo(response);
-
-            _hateoasMock.Verify(h => h.AddParkingLinks(It.IsAny<ParkingResponseDto>(), It.IsAny<IUrlHelper>()), Times.Once);
-        }
+        
     }
 }

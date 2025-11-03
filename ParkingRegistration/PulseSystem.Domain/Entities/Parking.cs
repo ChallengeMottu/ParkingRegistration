@@ -15,9 +15,11 @@ public class Parking
     public int Capacity { get; set; }
     public DateTime RegisterDate { get; set; } = DateTime.Now;
     
-    public string structurePlan { get; set; }
+    public string StructurePlan { get; set; }
     
-    public string floorPlan { get; set; } 
+    public string FloorPlan { get; set; } 
+    
+    public string MapPlan { get; set; } 
     public List<Zone> Zones { get; set; } = new List<Zone>();
     public List<Gateway> Gateways { get; set; } = new List<Gateway>();
 

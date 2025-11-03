@@ -27,6 +27,8 @@ public class Program
                     .AllowAnyMethod();
             });
         });
+        
+        builder.Services.AddSingleton<HateoasConfig>();
 
         builder.Services.AddAppDbContext(builder.Configuration);
         builder.Services.AddRepositories();

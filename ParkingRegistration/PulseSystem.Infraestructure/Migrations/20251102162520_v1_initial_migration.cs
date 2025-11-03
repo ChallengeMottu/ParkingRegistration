@@ -11,24 +11,27 @@ namespace PulseSystem.Infraestructure.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            
+
             migrationBuilder.CreateTable(
                 name: "PARKINGS",
                 columns: table => new
                 {
                     ID = table.Column<long>(type: "NUMBER(19)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
-                    Name = table.Column<string>(type: "VARCHAR2(150)", maxLength: 150, nullable: false),
-                    Street = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
-                    Complement = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
-                    Neighborhood = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
-                    Cep = table.Column<string>(type: "NVARCHAR2(9)", maxLength: 9, nullable: false),
-                    City = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
-                    State = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
-                    AvailableArea = table.Column<decimal>(type: "NUMBER", nullable: false),
-                    Capacity = table.Column<decimal>(type: "NUMBER", nullable: false),
-                    RegisterDate = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false, defaultValueSql: "SYSDATE"),
-                    structurePlan = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
-                    floorPlan = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    NAME = table.Column<string>(type: "VARCHAR2(150)", maxLength: 150, nullable: false),
+                    STREET = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
+                    COMPLEMENT = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
+                    NEIGHBORHOOD = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
+                    CEP = table.Column<string>(type: "NVARCHAR2(9)", maxLength: 9, nullable: false),
+                    CITY = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
+                    STATE = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
+                    AVAILABLE_AREA = table.Column<decimal>(type: "NUMBER", nullable: false),
+                    CAPACITY = table.Column<decimal>(type: "NUMBER", nullable: false),
+                    REGISTER_DATE = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false, defaultValueSql: "SYSDATE"),
+                    STRUCTURE_PLAN = table.Column<string>(type: "VARCHAR2(4000)", nullable: false),
+                    FLOOR_PLAN = table.Column<string>(type: "VARCHAR2(4000)", nullable: false),
+                    MAP_PLAN = table.Column<string>(type: "CLOB", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -39,20 +42,20 @@ namespace PulseSystem.Infraestructure.Migrations
                 name: "GATEWAYS",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "NUMBER(19)", nullable: false)
+                    ID = table.Column<long>(type: "NUMBER(19)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
-                    Model = table.Column<string>(type: "VARCHAR2(100)", maxLength: 100, nullable: false),
-                    Status = table.Column<decimal>(type: "NUMBER", nullable: false),
-                    MacAddress = table.Column<string>(type: "VARCHAR2(17)", maxLength: 17, nullable: false),
-                    LastIP = table.Column<string>(type: "VARCHAR2(15)", maxLength: 15, nullable: false),
-                    RegisterDate = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false, defaultValueSql: "SYSDATE"),
+                    MODEL = table.Column<string>(type: "VARCHAR2(100)", maxLength: 100, nullable: false),
+                    STATUS = table.Column<decimal>(type: "NUMBER", nullable: false),
+                    MAC_ADDRESS = table.Column<string>(type: "VARCHAR2(17)", maxLength: 17, nullable: false),
+                    LAST_IP = table.Column<string>(type: "VARCHAR2(15)", maxLength: 15, nullable: false),
+                    REGISTER_DATE = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false, defaultValueSql: "SYSDATE"),
                     ParkingId = table.Column<long>(type: "NUMBER(19)", nullable: false),
-                    MaxCoverageArea = table.Column<decimal>(type: "NUMBER", nullable: false),
-                    MaxCapacity = table.Column<decimal>(type: "NUMBER", nullable: false)
+                    MAX_COVERAGE_AREA = table.Column<decimal>(type: "NUMBER", nullable: false),
+                    MAX_CAPACITY = table.Column<decimal>(type: "NUMBER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GATEWAYS", x => x.Id);
+                    table.PrimaryKey("PK_GATEWAYS", x => x.ID);
                     table.ForeignKey(
                         name: "FK_GATEWAYS_PARKINGS_ParkingId",
                         column: x => x.ParkingId,
@@ -65,17 +68,17 @@ namespace PulseSystem.Infraestructure.Migrations
                 name: "ZONES",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "NUMBER(19)", nullable: false)
+                    ID = table.Column<long>(type: "NUMBER(19)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
-                    Name = table.Column<string>(type: "VARCHAR2(100)", maxLength: 100, nullable: false),
-                    Description = table.Column<string>(type: "VARCHAR2(500)", maxLength: 500, nullable: false),
-                    Width = table.Column<decimal>(type: "NUMBER", nullable: false),
-                    Length = table.Column<decimal>(type: "NUMBER", nullable: false),
+                    NAME = table.Column<string>(type: "VARCHAR2(100)", maxLength: 100, nullable: false),
+                    DESCRIPTION = table.Column<string>(type: "VARCHAR2(500)", maxLength: 500, nullable: false),
+                    WIDTH = table.Column<decimal>(type: "NUMBER", nullable: false),
+                    LENGTH = table.Column<decimal>(type: "NUMBER", nullable: false),
                     ParkingId = table.Column<long>(type: "NUMBER(19)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ZONES", x => x.Id);
+                    table.PrimaryKey("PK_ZONES", x => x.ID);
                     table.ForeignKey(
                         name: "FK_ZONES_PARKINGS_ParkingId",
                         column: x => x.ParkingId,
@@ -98,6 +101,7 @@ namespace PulseSystem.Infraestructure.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+
             migrationBuilder.DropTable(
                 name: "GATEWAYS");
 

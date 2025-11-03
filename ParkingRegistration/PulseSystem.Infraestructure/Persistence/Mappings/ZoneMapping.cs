@@ -13,22 +13,27 @@ namespace PulseSystem.Infraestructure.Persistence.Mappings
 
             
             builder.HasKey(z => z.Id);
+            builder.Property(z => z.Id).HasColumnName("ID");
 
             builder.Property(z => z.Name)
                 .IsRequired()
+                .HasColumnName("NAME")
                 .HasMaxLength(100)
                 .HasColumnType("VARCHAR2(100)"); 
 
             builder.Property(z => z.Description)
                 .HasMaxLength(500)
+                .HasColumnName("DESCRIPTION")
                 .HasColumnType("VARCHAR2(500)"); 
 
             builder.Property(z => z.Width)
                 .IsRequired()
+                .HasColumnName("WIDTH")
                 .HasColumnType("NUMBER"); 
 
             builder.Property(z => z.Length)
                 .IsRequired()
+                .HasColumnName("LENGTH")
                 .HasColumnType("NUMBER"); 
 
 

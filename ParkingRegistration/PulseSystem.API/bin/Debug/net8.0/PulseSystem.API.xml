@@ -75,13 +75,19 @@
             <param name="id">ID do pátio.</param>
             <returns>Pátio correspondente.</returns>
         </member>
-        <member name="M:PulseSystem.Controllers.ParkingController.GetByLocation(System.String,System.String)">
+        <member name="M:PulseSystem.Controllers.ParkingController.GetStructurePlanByIdAsync(System.Int64)">
             <summary>
-            Retorna um pátio pelo endereço (rua e complemento).
+            Retorna o estrutura da planta baixa do pátio pelo ID
             </summary>
-            <param name="street">Nome da rua do pátio.</param>
-            <param name="complement">Complemento do endereço do pátio.</param>
-            <returns>Pátio correspondente ao endereço informado.</returns>
+            <param name="id">ID do pátio.</param>
+            <returns>StructurePlan do pátio correspondente.</returns>
+        </member>
+        <member name="M:PulseSystem.Controllers.ParkingController.GetMapPlanByIdAsync(System.Int64)">
+            <summary>
+            Retorna o MapPlan do pátio pelo ID
+            </summary>
+            <param name="id">ID do pátio.</param>
+            <returns>MapPlan do pátio correspondente.</returns>
         </member>
         <member name="M:PulseSystem.Controllers.ParkingController.Create(PulseSystem.Application.DTOs.requests.ParkingRequestDto)">
             <summary>

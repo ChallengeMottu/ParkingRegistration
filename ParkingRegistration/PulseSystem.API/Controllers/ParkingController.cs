@@ -21,8 +21,6 @@ namespace PulseSystem.Controllers
             _parkingService = parkingService;
             _hateoas = hateoas;
         }
-
-        
         
 
         /// <summary>
@@ -62,6 +60,11 @@ namespace PulseSystem.Controllers
         }
         
         
+        /// <summary>
+        /// Retorna o estrutura da planta baixa do pátio pelo ID
+        /// </summary>
+        /// <param name="id">ID do pátio.</param>
+        /// <returns>StructurePlan do pátio correspondente.</returns>
         [HttpGet("{id:long}/structure", Name = "GetStructurePlanById")]
         [Produces("image/svg+xml")]
         [ProducesResponseType(200)]
@@ -76,19 +79,18 @@ namespace PulseSystem.Controllers
 
 
         /// <summary>
-        /// Retorna um pátio pelo endereço (rua e complemento).
+        /// Retorna o MapPlan do pátio pelo ID
         /// </summary>
-        /// <param name="street">Nome da rua do pátio.</param>
-        /// <param name="complement">Complemento do endereço do pátio.</param>
-        /// <returns>Pátio correspondente ao endereço informado.</returns>
-        [HttpGet("location")]
-        [ProducesResponseType(typeof(ParkingResponseDto), 200)]
+        /// <param name="id">ID do pátio.</param>
+        /// <returns>MapPlan do pátio correspondente.</returns>
+        [HttpGet("{id:long}/map", Name = "GetMapPlanById")]
+        [Produces("image/svg+xml")]
+        [ProducesResponseType(200)]
         [ProducesResponseType(404)]
-        public async Task<ActionResult<ParkingResponseDto>> GetByLocation([FromQuery] string street, [FromQuery] string complement)
+        public async Task<ActionResult> GetMapPlanByIdAsync(long id)
         {
-            var parking = await _parkingService.GetByLocationAsync(street, complement);
-            _hateoas.AddParkingLinks(parking, Url);
-            return Ok(parking);
+            var parking = await _parkingService.GetMapPlanByIdAsync(id);
+            return Content(parking, "image/svg+xml");
         }
 
         /// <summary>

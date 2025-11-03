@@ -25,59 +25,63 @@ namespace PulseSystem.Infraestructure.Migrations
             modelBuilder.Entity("PulseSystem.Domain.Entities.Employee", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
-
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("ID");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("EMAIL");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("PASSWORD");
 
                     b.Property<string>("Role")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("ROLE");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees", t =>
-                        {
-                            t.ExcludeFromMigrations();
-                        });
+                    b.ToTable("EMPLOYEES", "RM558830");
                 });
 
             modelBuilder.Entity("PulseSystem.Domain.Entities.Gateway", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(19)");
+                        .HasColumnType("NUMBER(19)")
+                        .HasColumnName("ID");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("LastIP")
                         .IsRequired()
                         .HasMaxLength(15)
-                        .HasColumnType("VARCHAR2(15)");
+                        .HasColumnType("VARCHAR2(15)")
+                        .HasColumnName("LAST_IP");
 
                     b.Property<string>("MacAddress")
                         .IsRequired()
                         .HasMaxLength(17)
-                        .HasColumnType("VARCHAR2(17)");
+                        .HasColumnType("VARCHAR2(17)")
+                        .HasColumnName("MAC_ADDRESS");
 
                     b.Property<decimal>("MaxCapacity")
-                        .HasColumnType("NUMBER");
+                        .HasColumnType("NUMBER")
+                        .HasColumnName("MAX_CAPACITY");
 
                     b.Property<decimal>("MaxCoverageArea")
-                        .HasColumnType("NUMBER");
+                        .HasColumnType("NUMBER")
+                        .HasColumnName("MAX_COVERAGE_AREA");
 
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("VARCHAR2(100)");
+                        .HasColumnType("VARCHAR2(100)")
+                        .HasColumnName("MODEL");
 
                     b.Property<long>("ParkingId")
                         .HasColumnType("NUMBER(19)");
@@ -85,10 +89,12 @@ namespace PulseSystem.Infraestructure.Migrations
                     b.Property<DateTime>("RegisterDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("REGISTER_DATE")
                         .HasDefaultValueSql("SYSDATE");
 
                     b.Property<decimal>("Status")
-                        .HasColumnType("NUMBER");
+                        .HasColumnType("NUMBER")
+                        .HasColumnName("STATUS");
 
                     b.HasKey("Id");
 
@@ -107,28 +113,39 @@ namespace PulseSystem.Infraestructure.Migrations
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<decimal>("AvailableArea")
-                        .HasColumnType("NUMBER");
+                        .HasColumnType("NUMBER")
+                        .HasColumnName("AVAILABLE_AREA");
 
                     b.Property<decimal>("Capacity")
-                        .HasColumnType("NUMBER");
+                        .HasColumnType("NUMBER")
+                        .HasColumnName("CAPACITY");
+
+                    b.Property<string>("FloorPlan")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR2(4000)")
+                        .HasColumnName("FLOOR_PLAN");
+
+                    b.Property<string>("MapPlan")
+                        .IsRequired()
+                        .HasColumnType("CLOB")
+                        .HasColumnName("MAP_PLAN");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(150)
-                        .HasColumnType("VARCHAR2(150)");
+                        .HasColumnType("VARCHAR2(150)")
+                        .HasColumnName("NAME");
 
                     b.Property<DateTime>("RegisterDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("REGISTER_DATE")
                         .HasDefaultValueSql("SYSDATE");
 
-                    b.Property<string>("floorPlan")
+                    b.Property<string>("StructurePlan")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
-
-                    b.Property<string>("structurePlan")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("VARCHAR2(4000)")
+                        .HasColumnName("STRUCTURE_PLAN");
 
                     b.HasKey("Id");
 
@@ -139,28 +156,33 @@ namespace PulseSystem.Infraestructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(19)");
+                        .HasColumnType("NUMBER(19)")
+                        .HasColumnName("ID");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
-                        .HasColumnType("VARCHAR2(500)");
+                        .HasColumnType("VARCHAR2(500)")
+                        .HasColumnName("DESCRIPTION");
 
                     b.Property<decimal>("Length")
-                        .HasColumnType("NUMBER");
+                        .HasColumnType("NUMBER")
+                        .HasColumnName("LENGTH");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("VARCHAR2(100)");
+                        .HasColumnType("VARCHAR2(100)")
+                        .HasColumnName("NAME");
 
                     b.Property<long>("ParkingId")
                         .HasColumnType("NUMBER(19)");
 
                     b.Property<decimal>("Width")
-                        .HasColumnType("NUMBER");
+                        .HasColumnType("NUMBER")
+                        .HasColumnName("WIDTH");
 
                     b.HasKey("Id");
 
@@ -191,37 +213,37 @@ namespace PulseSystem.Infraestructure.Migrations
                                 .IsRequired()
                                 .HasMaxLength(9)
                                 .HasColumnType("NVARCHAR2(9)")
-                                .HasColumnName("Cep");
+                                .HasColumnName("CEP");
 
                             b1.Property<string>("City")
                                 .IsRequired()
                                 .HasMaxLength(100)
                                 .HasColumnType("NVARCHAR2(100)")
-                                .HasColumnName("City");
+                                .HasColumnName("CITY");
 
                             b1.Property<string>("Complement")
                                 .IsRequired()
                                 .HasMaxLength(50)
                                 .HasColumnType("NVARCHAR2(50)")
-                                .HasColumnName("Complement");
+                                .HasColumnName("COMPLEMENT");
 
                             b1.Property<string>("Neighborhood")
                                 .IsRequired()
                                 .HasMaxLength(100)
                                 .HasColumnType("NVARCHAR2(100)")
-                                .HasColumnName("Neighborhood");
+                                .HasColumnName("NEIGHBORHOOD");
 
                             b1.Property<string>("State")
                                 .IsRequired()
                                 .HasMaxLength(50)
                                 .HasColumnType("NVARCHAR2(50)")
-                                .HasColumnName("State");
+                                .HasColumnName("STATE");
 
                             b1.Property<string>("Street")
                                 .IsRequired()
                                 .HasMaxLength(100)
                                 .HasColumnType("NVARCHAR2(100)")
-                                .HasColumnName("Street");
+                                .HasColumnName("STREET");
 
                             b1.HasKey("ParkingId");
 

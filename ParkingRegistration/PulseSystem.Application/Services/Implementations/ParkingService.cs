@@ -76,21 +76,16 @@ public class ParkingService : IParkingService
     {
         var parking = await _parkingRepository.GetByIdAsync(id)
                       ?? throw new ResourceNotFoundException("Pátio não encontrado");
-        return parking.structurePlan;
+        return parking.StructurePlan;
     }
 
-    public async Task<ParkingResponseDto?> GetByLocationAsync(string street, string complement)
+    public async Task<string> GetMapPlanByIdAsync(long id)
     {
-        if (string.IsNullOrWhiteSpace(street))
-            throw new InvalidArgumentException("Street");
-        if (string.IsNullOrWhiteSpace(complement))
-            throw new InvalidArgumentException("Complement");
-
-        var parking = await _parkingRepository.GetByLocationAsync(street, complement)
-                      ?? throw new ResourceNotFoundException("Nenhum pátio encontrado nesse endereço");
-
-        return _mapper.Map<ParkingResponseDto>(parking);
+        var parking = await _parkingRepository.GetByIdAsync(id) ?? throw new ResourceNotFoundException("Pátio não encontrado");
+        return parking.MapPlan;
     }
+
+    
 
    
 

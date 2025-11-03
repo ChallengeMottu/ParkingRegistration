@@ -1,9 +1,10 @@
-﻿using PulseSystem.Domain.Entities;
+﻿using PulseSystem.Application.Services.interfaces;
+using PulseSystem.Domain.Entities;
 using PulseSystem.Infraestructure.Repositories.interfaces;
 
 namespace PulseSystem.Application.Services.Implementations;
 
-public class LoginService
+public class LoginService : ILoginService
 {
     private readonly IEmployeeRepository _employeeRepository;
 

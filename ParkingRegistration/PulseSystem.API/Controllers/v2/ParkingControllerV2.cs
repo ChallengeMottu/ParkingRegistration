@@ -25,23 +25,43 @@ namespace PulseSystem.Controllers.v2
             _hateoas = new HateoasConfig();
         }
 
+        [HttpGet("{id:long}", Name = "GetParkingByIdV2")]
+        [ProducesResponseType(typeof(ParkingResponseListDto), 200)]
+        [ProducesResponseType(404)]
+        [ApiVersion("2.0")]
+        public async Task<ActionResult<ParkingResponseListDto>> GetById(long id)
+        {
+            var parking = await _parkingService.GetByIdAsync(id);
+            _hateoas.AddParkingLinks(parking, Url);
+            return Ok(parking);
+        }
+
         [HttpPost]
         [ProducesResponseType(typeof(ParkingSuggestionDto), 201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         [ProducesResponseType(409)]
+        [ApiVersion("2.0")]
         public async Task<ActionResult<ParkingSuggestionDto>> Create([FromBody] ParkingRequestDto dto)
         {
             var parking = await _parkingService.AddAsync(dto);
             _hateoas.AddParkingLinks(parking, Url);
-            return CreatedAtAction(nameof(GetById), new { id = parking.Id }, parking);
+
+            // Criando a resposta com rota nomeada e versão explicitamente
+            return CreatedAtRoute(
+                "GetParkingByIdV2",
+                new { id = parking.Id, version = "2.0" },
+                parking
+            );
         }
+
 
         [HttpPut("{id:long}")]
         [ProducesResponseType(typeof(ParkingSuggestionDto), 200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         [ProducesResponseType(409)]
+        [ApiVersion("2.0")]
         public async Task<ActionResult<ParkingSuggestionDto>> Update(long id, [FromBody] ParkingRequestDto dto)
         {
             var updated = await _parkingService.UpdateAsync(id, dto);
@@ -49,14 +69,8 @@ namespace PulseSystem.Controllers.v2
             return Ok(updated);
         }
 
-        [HttpGet("{id:long}")]
-        [ProducesResponseType(typeof(ParkingResponseListDto), 200)]
-        [ProducesResponseType(404)]
-        public async Task<ActionResult<ParkingResponseListDto>> GetById(long id)
-        {
-            var parking = await _parkingService.GetByIdAsync(id);
-            _hateoas.AddParkingLinks(parking, Url);
-            return Ok(parking);
-        }
+        
+        
+        
     }
 }

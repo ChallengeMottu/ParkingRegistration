@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using PulseSystem.Application.DTOs.requests;
 using PulseSystem.Application.Services.Implementations;
+using PulseSystem.Application.Services.interfaces;
 using PulseSystem.Domain.Entities;
 
 namespace PulseSystem.Controllers;
@@ -17,10 +18,10 @@ namespace PulseSystem.Controllers;
 [ApiVersion("1.0")]
 public class AuthController : ControllerBase
 {
-    private readonly LoginService _loginService;
+    private readonly ILoginService _loginService;
     private readonly IConfiguration _configuration;
 
-    public AuthController(LoginService loginService, IConfiguration configuration)
+    public AuthController(ILoginService loginService, IConfiguration configuration)
     {
         _loginService = loginService;
         _configuration = configuration;

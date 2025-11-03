@@ -16,7 +16,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IZoneService, ZoneService>();
         services.AddScoped<IParkingServiceV2, ParkingServiceV2>();
         services.AddScoped<IGatewayServiceV2, GatewayServiceV2>();
-        services.AddScoped<LoginService>();
+        services.AddScoped<ILoginService, LoginService>();
         services.AddSingleton<IGatewayPredictionService, GatewayPredictionService>();
         return services;
     }

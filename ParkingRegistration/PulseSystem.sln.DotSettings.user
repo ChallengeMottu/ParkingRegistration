@@ -1,6 +1,15 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAssertionScope_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FSourcesCache_003F218c9ef48fc14549de357b2bdcc8ac8151e68dc423a8dd8abbd997a1e66ec9_003FAssertionScope_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b09f0454_002D2449_002D4c35_002Dbc83_002D05433f68605b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetById_ShouldReturnOk_WhenParkingExists" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExecutionTimer_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FSourcesCache_003F3b92f859131bde25d0f7a63de08963e995d1e1426e584dfd4b8e833d2d3dba_003FExecutionTimer_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=356cf518_002D8db7_002D437f_002Dbef6_002D67298b7af539/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TrainAndSaveModel_ShouldCreateModelFile" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Unit.Services.GatewayPredictionServiceTests.TrainAndSaveModel_ShouldCreateModelFile&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.AuthControllerTests.Login_ShouldReturnToken_WhenCredentialsAreValidAndUserIsGestor&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.v2.ParkingControllerV2Tests.Create_ShouldReturnCreated&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.v2.ParkingControllerV2Tests.GetById_ShouldReturnOk&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b09f0454_002D2449_002D4c35_002Dbc83_002D05433f68605b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetById_ShouldReturnOk_WhenParkingExists" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Unit.Controllers.ParkingControllerTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.Controllers.ParkingControllerIntegrationTests.GetAll_ShouldReturnOk&lt;/TestId&gt;&#xD;
@@ -20,5 +29,20 @@
     &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Unit.Services.V2.GatewayServiceV2Tests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Unit.Controllers.V2.GatewayControllerV2Tests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Unit.Controllers.V2.ParkingControllerV2Tests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ParkingControllerTests.GetAll_ShouldReturnOk&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ParkingControllerTests.GetById_ShouldReturnParking&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ParkingControllerTests.Create_ShouldReturnCreated&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ParkingControllerTests.Update_ShouldReturnOk&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ParkingControllerTests.Delete_ShouldReturnNoContent&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.GatewayControllerTests.GetAll_ShouldReturnOk&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.GatewayControllerTests.GetById_ShouldReturnGateway&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.GatewayControllerTests.Create_ShouldReturnCreated&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.GatewayControllerTests.Update_ShouldReturnOk&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.GatewayControllerTests.Delete_ShouldReturnNoContent&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ZoneControllerTests.GetAll_ShouldReturnOk&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ZoneControllerTests.GetById_ShouldReturnZone&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ZoneControllerTests.Create_ShouldReturnCreated&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ZoneControllerTests.Update_ShouldReturnOk&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::158F6FF5-4D9A-481D-8819-8C45C04F1235::net8.0::PulseSystem.API.Tests.Integration.ZoneControllerTests.Delete_ShouldReturnNoContent&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

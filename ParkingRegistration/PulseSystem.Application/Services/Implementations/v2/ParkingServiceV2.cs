@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PulseSystem.Application.DTOs.requests;
 using PulseSystem.Application.DTOs.responses;
 using PulseSystem.Application.Exceptions;
@@ -13,13 +14,11 @@ public class ParkingServiceV2 : IParkingServiceV2
     {
         private readonly IParkingRepository _parkingRepository;
         private readonly IMapper _mapper;
-        private readonly IGatewayPredictionService _mlService;
 
-        public ParkingServiceV2(IParkingRepository parkingRepository, IMapper mapper, IGatewayPredictionService mlService)
+        public ParkingServiceV2(IParkingRepository parkingRepository, IMapper mapper)
         {
             _parkingRepository = parkingRepository;
             _mapper = mapper;
-            _mlService = mlService;
         }
         
         public async Task<ParkingResponseListDto> GetByIdAsync(long id)
@@ -52,14 +51,14 @@ public class ParkingServiceV2 : IParkingServiceV2
         
         private ParkingSuggestionDto MapToSuggestionDto(Parking parking)
         {
-            return new ParkingSuggestionDto()
+            return new ParkingSuggestionDto
             {
                 Id = parking.Id,
                 Name = parking.Name,
                 AvailableArea = parking.AvailableArea,
                 Capacity = parking.Capacity,
                 ZoneSuggestionMessage = GenerateZoneSuggestionMessage(parking),
-                SuggestedGateways = CalculateSuggestedGatewaysML(parking) 
+                SuggestedGateways = CalculateSuggestedGateways(parking)
             };
         }
 
@@ -70,9 +69,45 @@ public class ParkingServiceV2 : IParkingServiceV2
             return $"Podem ser adicionadas {maxZones} zonas de até {zoneArea:F2} m² cada";
         }
         
-        private int CalculateSuggestedGatewaysML(Parking parking)
+        public async Task<string> GetStructurePlanByIdAsync(long id)
         {
-            
-            return _mlService.PredictGateways(parking.AvailableArea, parking.Capacity);
+            var parking = await _parkingRepository.GetByIdAsync(id)
+                          ?? throw new ResourceNotFoundException("Pátio não encontrado");
+            return parking.StructurePlan;
         }
+        
+        public async Task RemoveAsync(long id)
+        {
+            var existing = await _parkingRepository.GetByIdAsync(id)
+                           ?? throw new ResourceNotFoundException("Pátio não encontrado");
+
+            await _parkingRepository.RemoveAsync(existing);
+        }
+        
+        public async Task<PaginatedResult<ParkingResponseDto>> GetAllAsync(int pageNumber, int pageSize)
+        {
+            if (pageNumber < 1) pageNumber = 1;
+            if (pageSize < 1) pageSize = 10;
+
+            var query = _parkingRepository.Query();
+            var totalItems = await query.CountAsync();
+
+            var parkings = await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var dtoList = _mapper.Map<List<ParkingResponseDto>>(parkings);
+            return new PaginatedResult<ParkingResponseDto>(dtoList, totalItems, pageNumber, pageSize);
+        }
+        
+        private int CalculateSuggestedGateways(Parking parking)
+        {
+            const decimal defaultMaxCoverage = 10000m; 
+            const int defaultMaxCapacity = 100;        
+
+            return parking.CalculateRequiredGateways(defaultMaxCoverage, defaultMaxCapacity);
+        }
+        
+        
     }

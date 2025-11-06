@@ -123,15 +123,15 @@ namespace PulseSystem.API.Tests.Unit.Services
             var parking = new Parking
             {
                 Id = 1,
-                AvailableArea = 50000, // valor positivo
-                Capacity = 100         // valor positivo
+                AvailableArea = 50000, 
+                Capacity = 100         
             };
 
-            // Mock do repositório de parkings
+            
             var parkingRepoMock = new Mock<IParkingRepository>();
             parkingRepoMock.Setup(r => r.GetByIdAsync(1)).ReturnsAsync(parking);
 
-            // Mock do repositório de gateways
+            
             _gatewayRepoMock.Setup(r => r.GetAllByParkingId(1)).ReturnsAsync(new List<Gateway>());
             _gatewayRepoMock.Setup(r => r.AddAsync(It.IsAny<Gateway>())).Returns(Task.CompletedTask);
 

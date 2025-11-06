@@ -110,6 +110,207 @@
             </summary>
             <param name="id">ID do pátio a ser removido.</param>
         </member>
+        <member name="M:PulseSystem.Controllers.v2.AuthControllerV2.Login(PulseSystem.Application.DTOs.requests.LoginRequest)">
+            <summary>
+            Autentica o usuário e retorna um token JWT.
+            </summary>
+            <param name="loginRequest">Credenciais do usuário (email e senha).</param>
+            <returns>Token JWT para acesso à API.</returns>
+            <response code="200">Retorna o token JWT.</response>
+            <response code="401">Credenciais inválidas ou usuário sem permissão.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.AuthControllerV2.GenerateJwtToken(PulseSystem.Domain.Entities.Employee)">
+            <summary>
+            Gera o token JWT com base nas informações do usuário.
+            </summary>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.GatewayControllerV2.GetById(System.Int64)">
+            <summary>
+            Obtém um gateway pelo ID.
+            </summary>
+            <param name="id">ID do gateway.</param>
+            <returns>Gateway correspondente.</returns>
+            <response code="200">Gateway encontrado.</response>
+            <response code="404">Gateway não encontrado.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.GatewayControllerV2.Create(PulseSystem.Application.DTOs.requests.GatewayRequestDto)">
+            <summary>
+            Cria um novo gateway.
+            </summary>
+            <param name="dto">Dados do gateway.</param>
+            <returns>Gateway criado.</returns>
+            <response code="201">Criado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Pátio associado não encontrado.</response>
+            <response code="409">MAC Address já cadastrado.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.GatewayControllerV2.Update(System.Int64,PulseSystem.Application.DTOs.requests.GatewayRequestDto)">
+            <summary>
+            Atualiza um gateway existente.
+            </summary>
+            <param name="id">ID do gateway.</param>
+            <param name="dto">Dados atualizados.</param>
+            <returns>Gateway atualizado.</returns>
+            <response code="200">Atualizado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Gateway não encontrado.</response>
+            <response code="409">MAC Address já utilizado.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.GatewayControllerV2.GetByMacAddress(System.String)">
+            <summary>
+            Obtém um gateway pelo endereço MAC.
+            </summary>
+            <param name="macAddress">MAC Address.</param>
+            <returns>Gateway correspondente.</returns>
+            <response code="200">Gateway encontrado.</response>
+            <response code="404">Gateway não encontrado.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.GatewayControllerV2.Delete(System.Int64)">
+            <summary>
+            Remove um gateway.
+            </summary>
+            <param name="id">ID do gateway.</param>
+            <response code="204">Removido com sucesso.</response>
+            <response code="404">Gateway não encontrado.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.GatewayControllerV2.GetByParkingId(System.Int64)">
+            <summary>
+            Lista todos os gateways de um pátio específico.
+            </summary>
+            <param name="parkingId">ID do pátio.</param>
+            <returns>Lista de gateways.</returns>
+            <response code="200">Lista retornada.</response>
+            <response code="404">Pátio não encontrado.</response>
+            <response code="401">Usuário não logado, sem permissão para executar a funcionalidade</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ParkingControllerV2.Create(PulseSystem.Application.DTOs.requests.ParkingRequestDto)">
+             <summary>
+             Cria um novo pátio.
+             </summary>
+             <param name="dto">Dados do pátio.</param>
+             <returns>Pátio criado.</returns>
+             <response code="201">Pátio criado com sucesso.</response>
+             <response code="400">Dados inválidos.</response>
+            <response code="401">Usuário não logado, sem permissão para executar a funcionalidade</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ParkingControllerV2.Update(System.Int64,PulseSystem.Application.DTOs.requests.ParkingRequestDto)">
+            <summary>
+            Atualiza um pátio existente.
+            </summary>
+            <param name="id">ID do pátio.</param>
+            <param name="dto">Dados atualizados.</param>
+            <returns>Pátio atualizado.</returns>
+            <response code="200">Pátio atualizado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Pátio não encontrado.</response>
+            <response code="401">Usuário não logado, sem permissão para executar a funcionalidade</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ParkingControllerV2.GetById(System.Int64)">
+            <summary>
+            Obtém um pátio pelo ID.
+            </summary>
+            <param name="id">ID do pátio.</param>
+            <returns>Pátio correspondente.</returns>
+            <response code="200">Pátio encontrado.</response>
+            <response code="404">Pátio não encontrado.</response>
+            <response code="401">Usuário não logado, sem permissão para executar a funcionalidade</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ParkingControllerV2.SuggestGateways(System.Int64,PulseSystem.Application.ML.DTOs.ParkingGatewayQueryDto)">
+            <summary>
+            Sugere a quantidade ideal de gateways usando Machine Learning.
+            </summary>
+            <param name="id">ID do pátio.</param>
+            <param name="query">Parâmetros opcionais para cálculo.</param>
+            <returns>Resultado contendo parâmetros utilizados e sugestão gerada.</returns>
+            <response code="200">Sugestão gerada com sucesso.</response>
+            <response code="404">Pátio não encontrado.</response>
+            <response code="401">Usuário não logado, sem permissão para executar a funcionalidade</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ParkingControllerV2.GetStructurePlanByIdAsync(System.Int64)">
+            <summary>
+            Obtém a planta baixa (SVG) do pátio.
+            </summary>
+            <param name="id">ID do pátio.</param>
+            <response code="200">SVG retornado.</response>
+            <response code="404">Pátio não encontrado.</response>
+            <response code="401">Usuário não logado, sem permissão para executar a funcionalidade</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ParkingControllerV2.Delete(System.Int64)">
+            <summary>
+            Remove um pátio.
+            </summary>
+            <param name="id">ID do pátio.</param>
+            <response code="204">Removido com sucesso.</response>
+            <response code="404">Pátio não encontrado.</response>
+            <response code="401">Usuário não logado, sem permissão para executar a funcionalidade</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ParkingControllerV2.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Lista pátios com paginação.
+            </summary>
+            <param name="pageNumber">Página (padrão 1).</param>
+            <param name="pageSize">Tamanho da página (padrão 10).</param>
+            <returns>Lista paginada.</returns>
+            <response code="200">Lista retornada com sucesso.</response>
+            <response code="401">Usuário não logado, sem permissão para executar a funcionalidade</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ZoneControllerV2.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Retorna todas as zonas com suporte à paginação.
+            </summary>
+            <param name="pageNumber">Número da página desejada. Valor padrão: 1.</param>
+            <param name="pageSize">Quantidade de itens por página. Valor padrão: 10.</param>
+            <returns>Lista paginada contendo zonas.</returns>
+            <response code="200">Retorna a lista paginada de zonas.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ZoneControllerV2.GetById(System.Int64)">
+            <summary>
+            Retorna uma zona específica com base no ID.
+            </summary>
+            <param name="id">ID da zona.</param>
+            <returns>Objeto contendo os dados da zona.</returns>
+            <response code="200">Retorna a zona encontrada.</response>
+            <response code="404">Nenhuma zona foi encontrada com o ID informado.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ZoneControllerV2.GetByParkingId(System.Int64)">
+            <summary>
+            Retorna todas as zonas pertencentes a um pátio específico.
+            </summary>
+            <param name="parkingId">ID do pátio.</param>
+            <returns>Lista de zonas vinculadas ao pátio informado.</returns>
+            <response code="200">Retorna a lista de zonas do pátio.</response>
+            <response code="404">Nenhuma zona foi encontrada para o pátio informado.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ZoneControllerV2.Create(PulseSystem.Application.DTOs.requests.ZoneRequestDto)">
+            <summary>
+            Cria uma nova zona em um pátio.
+            </summary>
+            <param name="dto">Dados necessários para a criação da zona.</param>
+            <returns>A zona criada.</returns>
+            <response code="201">Zona criada com sucesso.</response>
+            <response code="400">Dados inválidos foram enviados.</response>
+            <response code="404">O pátio informado não foi encontrado.</response>
+            <response code="422">Erro de validação ao criar a zona.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ZoneControllerV2.Update(System.Int64,PulseSystem.Application.DTOs.requests.ZoneRequestDto)">
+            <summary>
+            Atualiza os dados de uma zona existente.
+            </summary>
+            <param name="id">ID da zona a ser atualizada.</param>
+            <param name="dto">Dados atualizados da zona.</param>
+            <returns>Zona atualizada.</returns>
+            <response code="200">Zona atualizada com sucesso.</response>
+            <response code="400">Dados inválidos foram enviados.</response>
+            <response code="404">Nenhuma zona foi encontrada com o ID informado.</response>
+        </member>
+        <member name="M:PulseSystem.Controllers.v2.ZoneControllerV2.Delete(System.Int64)">
+            <summary>
+            Remove uma zona com base no ID informado.
+            </summary>
+            <param name="id">ID da zona que será removida.</param>
+            <response code="204">Zona removida com sucesso.</response>
+            <response code="404">Nenhuma zona foi encontrada com o ID informado.</response>
+        </member>
         <member name="M:PulseSystem.Controllers.ZoneController.#ctor(PulseSystem.Application.Services.interfaces.IZoneService)">
             <summary>
             Construtor da controller de zonas.

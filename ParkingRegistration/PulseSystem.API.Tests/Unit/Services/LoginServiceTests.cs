@@ -4,7 +4,6 @@ using FluentAssertions;
 using PulseSystem.Application.Services.Implementations;
 using PulseSystem.Domain.Entities;
 using PulseSystem.Infraestructure.Repositories.interfaces;
-using System.Threading.Tasks;
 
 namespace PulseSystem.API.Tests.Unit.Services
 {

@@ -9,5 +9,9 @@ public interface IGatewayServiceV2
     Task<GatewayResponseDto> AddAsync(GatewayRequestDto dto);
     Task<GatewayResponseDto> UpdateAsync(long id, GatewayRequestDto dto);
     
-
+    Task RemoveAsync(long id);
+    
+    Task<IEnumerable<GatewayResponseDto>> GetAllByParkingId(long parkingId);
+    
+    Task<GatewayResponseDto> GetByMacAddressAsync(string macAddress);
 }

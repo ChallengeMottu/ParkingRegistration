@@ -89,6 +89,31 @@ public class GatewayServiceV2 : IGatewayServiceV2
 
         return _mapper.Map<GatewayResponseDto>(existing);
     }
+    
+    public async Task<IEnumerable<GatewayResponseDto>> GetAllByParkingId(long parkingId)
+    {
+        var gateways = await _gatewayRepository.GetAllByParkingId(parkingId);
+        if (gateways == null || !gateways.Any())
+            throw new ResourceNotFoundException("Gateways não encontrados no pátio");
+
+        return _mapper.Map<IEnumerable<GatewayResponseDto>>(gateways);
+    }
+    
+    public async Task<GatewayResponseDto> GetByMacAddressAsync(string macAddress)
+    {
+        var gateway = await _gatewayRepository.GetByMacAddressAsync(macAddress)
+                      ?? throw new ResourceNotFoundException($"Gateway com MAC Address {macAddress}");
+
+        return _mapper.Map<GatewayResponseDto>(gateway);
+    }
+    
+    public async Task RemoveAsync(long id)
+    {
+        var gateway = await _gatewayRepository.GetByIdAsync(id)
+                      ?? throw new ResourceNotFoundException("Gateway não encontrado");
+
+        await _gatewayRepository.RemoveAsync(gateway);
+    }
 
     private void ValidateGateway(Gateway gateway)
     {

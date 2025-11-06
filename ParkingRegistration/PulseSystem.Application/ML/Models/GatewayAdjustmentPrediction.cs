@@ -2,8 +2,8 @@
 
 namespace PulseSystem.Application.ML.Models;
 
-public class ParkingGatewayPrediction
+public class GatewayAdjustmentPrediction
 {
     [ColumnName("Score")]
-    public float PredictedGateways { get; set; }
+    public float PredictedAdjustment { get; set; }
 }

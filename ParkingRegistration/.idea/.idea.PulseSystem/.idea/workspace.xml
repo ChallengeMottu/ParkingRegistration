@@ -11,20 +11,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e61e929-9f82-4e59-9f15-f732671b3cdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PulseSystem.Application/ML/DTOs/ParkingGatewayQueryDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseSystem.Application/ML/Models/GatewayAdjustmentData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseSystem.Application/ML/Models/GatewayAdjustmentPrediction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PulseSystem.Application/ML/Services/GatewayHybridPredictionService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PulseSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PulseSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Controllers/v2/ParkingControllerV2Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Controllers/v2/ParkingControllerV2Tests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/GatewayPredictionServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/GatewayPredictionServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/v2/GatewayServiceV2Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/v2/GatewayServiceV2Tests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/v2/ParkingServiceV2Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/v2/ParkingServiceV2Tests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/PulseSystem.API.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/PulseSystem.API.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/NUnit3.TestAdapter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/NUnit3.TestAdapter.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.Tests.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.Tests.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Infraestructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Infraestructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Infraestructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/PulseSystem.Infraestructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/models/gatewayHybridModel.zip" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/models/gatewayHybridModel.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/models/gatewayModel.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/nunit.engine.api.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/nunit.engine.core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/nunit.engine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/bin/Debug/net8.0/testcentric.engine.metadata.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.GlobalUsings.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.GlobalUsings.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.API/Controllers/v2/AuthControllerV2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/Controllers/v2/AuthControllerV2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.API/Controllers/v2/ParkingControllerV2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/Controllers/v2/ParkingControllerV2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/PulseSystem.API.Tests.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/ref/PulseSystem.API.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/ref/PulseSystem.API.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/refint/PulseSystem.API.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/Debug/net8.0/refint/PulseSystem.API.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/PulseSystem.API.Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/PulseSystem.API.Tests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/PulseSystem.API.Tests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/PulseSystem.API.Tests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/PulseSystem.API.Tests.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/PulseSystem.API.Tests.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/rider.project.model.nuget.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API.Tests/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.API.exe" afterDir="false" />
@@ -35,7 +64,6 @@
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.Infraestructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.Infraestructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.Infraestructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/PulseSystem.Infraestructure.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/bin/Debug/net8.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/PulseSystem.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/PulseSystem.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/PulseSystem.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/PulseSystem.API.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/PulseSystem.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/PulseSystem.API.csproj.AssemblyReference.cache" afterDir="false" />
@@ -45,9 +73,6 @@
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/ref/PulseSystem.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/ref/PulseSystem.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/refint/PulseSystem.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.API/obj/Debug/net8.0/refint/PulseSystem.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.Application/ML/Services/GatewayPredictionService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.Application/ML/Services/IGatewayPredictionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/ML/Services/IGatewayPredictionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.Application/Services/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/Services/ServiceCollectionExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/bin/Debug/net8.0/PulseSystem.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/bin/Debug/net8.0/PulseSystem.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/bin/Debug/net8.0/PulseSystem.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/bin/Debug/net8.0/PulseSystem.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/bin/Debug/net8.0/PulseSystem.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/bin/Debug/net8.0/PulseSystem.Domain.dll" afterDir="false" />
@@ -57,7 +82,6 @@
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/PulseSystem.Application/obj/Debug/net8.0/PulseSystem.Application.sourcelink.json" afterDir="false" />
@@ -111,7 +135,7 @@
     <setting file="file://$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Controllers/ZoneControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Controllers/v2/GatewayControllerV2Tests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Controllers/v2/ParkingControllerV2Tests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/GatewayPredictionServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/GatewayHybridPredictionServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/GatewayServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/LoginServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.API.Tests/Unit/Services/ParkingServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -125,11 +149,11 @@
     <setting file="file://$PROJECT_DIR$/PulseSystem.API/Controllers/v2/AuthControllerV2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.API/Controllers/v2/GatewayControllerV2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.API/Controllers/v2/ParkingControllerV2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseSystem.API/Controllers/v2/ZoneControllerV2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PulseSystem.Application/DTOs/Responses/ParkingGatewaySuggestionDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.Application/ML/DTOs/ParkingGatewayQueryDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.Application/ML/Models/GatewayAdjustmentData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.Application/ML/Models/GatewayAdjustmentPrediction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PulseSystem.Application/ML/Models/ParkingGatewayData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PulseSystem.Application/ML/Models/ParkingGatewayPrediction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.Application/ML/Services/GatewayHybridPredictionService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.Application/ML/Services/IGatewayPredictionService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PulseSystem.Application/Services/Implementations/v2/GatewayServiceV2.cs" root0="FORCE_HIGHLIGHTING" />
@@ -262,7 +286,9 @@
       <workItem from="1762163625566" duration="6229000" />
       <workItem from="1762309077545" duration="590000" />
       <workItem from="1762311761645" duration="1425000" />
-      <workItem from="1762425286886" duration="727000" />
+      <workItem from="1762425286886" duration="11011000" />
+      <workItem from="1762480957686" duration="800000" />
+      <workItem from="1762562570819" duration="994000" />
     </task>
     <servers />
   </component>

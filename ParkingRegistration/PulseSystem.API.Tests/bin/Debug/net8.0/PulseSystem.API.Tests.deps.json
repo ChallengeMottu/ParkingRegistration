@@ -40,13 +40,11 @@
           "Microsoft.AspNetCore.Mvc.Testing": "8.0.21",
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "Moq": "4.20.72",
-          "NUnit": "3.14.0",
-          "NUnit.Analyzers": "3.9.0",
-          "NUnit3TestAdapter": "4.5.0",
           "PulseSystem.API": "1.0.0",
           "PulseSystem.Application": "1.0.0",
           "coverlet.collector": "6.0.0",
           "xunit": "2.9.3",
+          "xunit.runner.visualstudio": "2.5.7",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.BearerToken": "8.0.0.0",
@@ -1464,7 +1462,6 @@
           "Microsoft.TestPlatform.TestHost": "17.8.0"
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.OpenApi/1.6.14": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -1763,11 +1760,6 @@
           "lib/net6.0/Moq.dll": {}
         }
       },
-      "NETStandard.Library/2.0.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0"
-        }
-      },
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -1790,22 +1782,6 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
-      "NUnit/3.14.0": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/nunit.framework.dll": {
-            "assemblyVersion": "3.14.0.0",
-            "fileVersion": "3.14.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/nunit.framework.dll": {}
-        }
-      },
-      "NUnit.Analyzers/3.9.0": {},
-      "NUnit3TestAdapter/4.5.0": {},
       "Oracle.EntityFrameworkCore/9.23.90": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "9.0.9",
@@ -2257,6 +2233,7 @@
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
+      "xunit.runner.visualstudio/2.5.7": {},
       "PulseSystem.API/1.0.0": {
         "dependencies": {
           "Asp.Versioning.Mvc": "8.1.0",
@@ -4588,13 +4565,6 @@
       "path": "microsoft.net.test.sdk/17.8.0",
       "hashPath": "microsoft.net.test.sdk.17.8.0.nupkg.sha512"
     },
-    "Microsoft.NETCore.Platforms/1.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
-      "path": "microsoft.netcore.platforms/1.1.0",
-      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
-    },
     "Microsoft.OpenApi/1.6.14": {
       "type": "package",
       "serviceable": true,
@@ -4630,13 +4600,6 @@
       "path": "moq/4.20.72",
       "hashPath": "moq.4.20.72.nupkg.sha512"
     },
-    "NETStandard.Library/2.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
-      "path": "netstandard.library/2.0.0",
-      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
-    },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
@@ -4650,27 +4613,6 @@
       "sha512": "sha512-QWINE2x3MbTODsWT1Gh71GaGb5icBz4chS8VYvTgsBnsi8esgN6wtHhydd7fvToWECYGq7T4cgBBDiKD/363fg==",
       "path": "nuget.frameworks/6.5.0",
       "hashPath": "nuget.frameworks.6.5.0.nupkg.sha512"
-    },
-    "NUnit/3.14.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-R7iPwD7kbOaP3o2zldWJbWeMQAvDKD0uld27QvA3PAALl1unl7x0v2J7eGiJOYjimV/BuGT4VJmr45RjS7z4LA==",
-      "path": "nunit/3.14.0",
-      "hashPath": "nunit.3.14.0.nupkg.sha512"
-    },
-    "NUnit.Analyzers/3.9.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8bGAEljlBnzR+uU8oGQhTVKnbgBw1Mo71qjVkgzHdvtUkiB5XOIDyjAcS4KUo/j+F2Zv/xBUZRkCWXmejx4bfA==",
-      "path": "nunit.analyzers/3.9.0",
-      "hashPath": "nunit.analyzers.3.9.0.nupkg.sha512"
-    },
-    "NUnit3TestAdapter/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-s8JpqTe9bI2f49Pfr3dFRfoVSuFQyraTj68c3XXjIS/MRGvvkLnrg6RLqnTjdShX+AdFUCCU/4Xex58AdUfs6A==",
-      "path": "nunit3testadapter/4.5.0",
-      "hashPath": "nunit3testadapter.4.5.0.nupkg.sha512"
     },
     "Oracle.EntityFrameworkCore/9.23.90": {
       "type": "package",
@@ -4965,6 +4907,13 @@
       "sha512": "sha512-yMb6vMESlSrE3Wfj7V6cjQ3S4TXdXpRqYeNEI3zsX31uTsGMJjEw6oD5F5u1cHnMptjhEECnmZSsPxB6ChZHDQ==",
       "path": "xunit.extensibility.execution/2.9.3",
       "hashPath": "xunit.extensibility.execution.2.9.3.nupkg.sha512"
+    },
+    "xunit.runner.visualstudio/2.5.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-31Rl7dBJriX0DNwZfDp8gqFOPsiM0c9kqpcH/HvNi9vDp+K7Ydf42H7mVIvYT918Ywzn1ymLg1c4DDC6iU754w==",
+      "path": "xunit.runner.visualstudio/2.5.7",
+      "hashPath": "xunit.runner.visualstudio.2.5.7.nupkg.sha512"
     },
     "PulseSystem.API/1.0.0": {
       "type": "project",

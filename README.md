@@ -42,7 +42,7 @@ Cada camada possui uma responsabilidade bem definida, permitindo maior desacopla
 - **Application**: atua como orquestradora, chamando serviços e coordenando o fluxo entre domínio e infraestrutura. Isso facilita a implementação de regras de negócio sem acoplamento direto à camada de apresentação ou persistência.  
 - **Domain**: é o coração do sistema, onde ficam as entidades e regras de negócio. Essa camada não depende de outras, o que garante independência e testabilidade das regras de negócio.  
 - **Infrastructure**: cuida do acesso a dados e integrações externas. Dessa forma, mudanças no banco de dados ou em provedores externos impactam apenas esta camada, sem afetar diretamente o domínio ou a API.
-- - **Tests**: camada dedicada a testes unitários e de integração, garantindo que todas as regras de negócio, serviços e endpoints da API sejam validados. Essa camada está organizada em subpastas para **Unit** e **Integration**, permitindo separação clara dos tipos de testes.
+- **Tests**: camada dedicada a testes unitários e de integração, garantindo que todas as regras de negócio, serviços e endpoints da API sejam validados. Essa camada está organizada em subpastas para **Unit** e **Integration**, permitindo separação clara dos tipos de testes.
 
 Essa abordagem segue princípios do **Domain-Driven Design (DDD)** e **Clean Architecture**, assegurando que a lógica de negócio permaneça isolada e independente de tecnologias ou frameworks específicos.  
 
